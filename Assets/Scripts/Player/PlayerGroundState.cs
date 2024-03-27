@@ -19,10 +19,14 @@ public class PlayerGroundState : PlayerState
         base.Exit();
 
     }
-
     public override void Update()
     {
         base.Update();
+        if(Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
+        {
+            stateMachine.ChangeState(player.jumpState);
+            Debug.Log("jump");
+        }
 
     }
 }
