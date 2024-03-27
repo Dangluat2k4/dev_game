@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,6 +24,8 @@ public class PlayerState
     }
 
 
+    // virtual dùng dể kế thừa 
+    // Enter đầu vào
     public virtual void Enter()
     {
         player.anim.SetBool(animBoolName, true);
@@ -33,16 +35,17 @@ public class PlayerState
 
     }
 
+    // Update bắt đầu chạy
     public virtual void Update()
     {
         stateTimer -= Time.deltaTime;
 
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
-        Debug.Log("Click");
         // rb = player.rb;
 
     }
+    // Exit kết thúc
     public virtual void Exit()
     {
         player.anim.SetBool(animBoolName, false);

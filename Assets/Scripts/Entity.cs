@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +25,7 @@ public class Entity : MonoBehaviour
 
     public Transform attackCkeck;
 
+
     // attackCkeck diem kiem tra tan cong
     public float attackCkeckRadius;
     [SerializeField] protected Transform groundCheck;
@@ -47,6 +48,7 @@ public class Entity : MonoBehaviour
     {
 
     }
+    // hàm khởi tạo
     protected virtual void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
@@ -71,6 +73,7 @@ public class Entity : MonoBehaviour
         yield return new WaitForSeconds(knockbackDuration);
         isKnocked = false;
     }
+
     // collision
     // virtual de o che do cong khai
     public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);

@@ -517,14 +517,14 @@ MonoBehaviour:
   attackCkeck: {fileID: 1226399602}
   attackCkeckRadius: 0
   groundCheck: {fileID: 1954685426}
-  groundCheckDistance: 0.58
+  groundCheckDistance: 1
   wallCheck: {fileID: 698316004}
   wallCheckDistance: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 12
-  jumpForce: 0
+  jumpForce: 10
   dashSpeed: 0.43
   dashDuration: 0
   SwordReturnInpact: 0
@@ -578,7 +578,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -707,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 1954685425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: -0.62, z: 0}
+  m_LocalPosition: {x: 0.14, y: -0.44, z: 0}
   m_LocalScale: {x: 1.0849, y: 1.0849, z: 1.0849}
   m_ConstrainProportionsScale: 0
   m_Children: []
