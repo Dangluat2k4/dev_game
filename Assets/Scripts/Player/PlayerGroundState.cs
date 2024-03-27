@@ -17,10 +17,12 @@ public class PlayerGroundState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
     }
 
     public override void Update()
     {
         base.Update();
+
     }
 }
