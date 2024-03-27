@@ -525,9 +525,9 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 12
   jumpForce: 2
-  dashCoolDown: 0
-  dashSpeed: 30
-  dashDuration: 0.5
+  dashCoolDown: 2
+  dashSpeed: 25
+  dashDuration: 0.2
   SwordReturnInpact: 0
 --- !u!70 &1752413024
 CapsuleCollider2D:
