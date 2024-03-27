@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class PlayerAnimationTriggers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Player player => GetComponentInParent<Player>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
