@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpState : PlayerGroundState
+public class PlayerJumpState : PlayerState
 {
     public PlayerJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
@@ -24,7 +24,7 @@ public class PlayerJumpState : PlayerGroundState
         base.Update();
             if (rb.velocity.y < 0)
         {
-            stateMachine.ChangeState(player.jumpState);
+            stateMachine.ChangeState(player.idleState);
             Debug.Log("update");
         }
     }
