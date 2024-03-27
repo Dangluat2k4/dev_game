@@ -26,8 +26,6 @@ public class PlayerState
 
     public virtual void Enter()
     {
-        player.anim.SetBool(animBoolName, true);
-        rb = player.rb;
         // chuyen doi trang thai
         triggerCalled = false;
 
@@ -39,13 +37,12 @@ public class PlayerState
 
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
-        Debug.Log("Click");
         // rb = player.rb;
 
     }
     public virtual void Exit()
     {
-        player.anim.SetBool(animBoolName, false);
+
     }
     public virtual void AnimationFinishTriger()
     {
