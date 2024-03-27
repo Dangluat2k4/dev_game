@@ -39,7 +39,7 @@ public class PlayerState
 
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
-        Debug.Log("Click");
+
         // rb = player.rb;
 
     }
