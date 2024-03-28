@@ -22,7 +22,15 @@ public class PlayerGroundState : PlayerState
     public override void Update()
     {
         base.Update();
-        if(Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            stateMachine.ChangeState(player.primaryAttack);
+            Debug.Log("taans cong");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.jumpState);
             Debug.Log("jump");
