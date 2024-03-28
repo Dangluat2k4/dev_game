@@ -15,13 +15,8 @@ public class Player :Entity
 
 
     [Header("Dash info")]
-    [SerializeField] private float dashCoolDown;
-    private float dashUsageTimer;
     public float dashSpeed;
     public float dashDuration;
-
-    public float dashDir { get; private set; }
-
     public float SwordReturnInpact;
 
 
@@ -31,7 +26,6 @@ public class Player :Entity
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
     public PlayerPrimaryAttack primaryAttack { get; private set; }
-    public PlayerDashState dashState { get; private set; }
 
     protected override void Awake()
     {
@@ -46,8 +40,6 @@ public class Player :Entity
         airState = new PlayerAirState(this, stateMachine, "Jumping");
 
         primaryAttack = new PlayerPrimaryAttack(this, stateMachine, "Attack");
-
-        dashState = new PlayerDashState(this, stateMachine, "Dash");
     }
 
     protected override void Start()
@@ -60,7 +52,6 @@ public class Player :Entity
     {
         base.Update();
         stateMachine.currentState.Update();
-        CheckForDashInput();
     }
     public IEnumerator BusyFor(float _seconds)
     {
@@ -70,25 +61,4 @@ public class Player :Entity
     }
 
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTriger();
-
-    private void CheckForDashInput()
-    {
-        if (IsWallDetected())
-            return;
-
-        dashUsageTimer -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTimer < 0)
-        {
-            dashUsageTimer = dashCoolDown;
-            dashDir = Input.GetAxisRaw("Horizontal");
-
-            if (dashDir == 0)
-                dashDir = facingDir;
-
-            Debug.Log("dash");
-
-            stateMachine.ChangeState(dashState);
-        }
-    }
 }
