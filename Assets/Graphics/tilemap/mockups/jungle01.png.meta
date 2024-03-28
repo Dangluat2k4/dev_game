@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jungle01_0: -2441199041256662385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
