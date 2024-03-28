@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 698316003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.16, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -337,7 +337,7 @@ Transform:
   m_GameObject: {fileID: 1226399601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.17, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -418,7 +418,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1270715553, guid: 13d074c182cc83944988c60be68b96b0, type: 3}
+  m_Sprite: {fileID: -40893646, guid: 1faf5e304db2fb944ae26a5deaa4310f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -517,16 +517,17 @@ MonoBehaviour:
   attackCkeck: {fileID: 1226399602}
   attackCkeckRadius: 0
   groundCheck: {fileID: 1954685426}
-  groundCheckDistance: 1
+  groundCheckDistance: 0.58
   wallCheck: {fileID: 698316004}
-  wallCheckDistance: 0
+  wallCheckDistance: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 12
-  jumpForce: 10
-  dashSpeed: 0.43
-  dashDuration: 0
+  jumpForce: 2
+  dashCoolDown: 2
+  dashSpeed: 25
+  dashDuration: 0.2
   SwordReturnInpact: 0
 --- !u!70 &1752413024
 CapsuleCollider2D:
@@ -560,8 +561,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0017565489}
-  m_Size: {x: 0.5, y: 1.8783655}
+  m_Offset: {x: -0.3494201, y: -1.0849589}
+  m_Size: {x: 0.569884, y: 2.0880172}
   m_Direction: 0
 --- !u!50 &1752413025
 Rigidbody2D:
@@ -578,7 +579,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -586,9 +587,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &1756234198
 GameObject:
@@ -707,7 +708,7 @@ Transform:
   m_GameObject: {fileID: 1954685425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: -0.44, z: 0}
+  m_LocalPosition: {x: -0.38, y: -1.9, z: 0}
   m_LocalScale: {x: 1.0849, y: 1.0849, z: 1.0849}
   m_ConstrainProportionsScale: 0
   m_Children: []
