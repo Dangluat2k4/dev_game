@@ -28,7 +28,7 @@ public class PlayerIdleState : PlayerGroundState
             return;
 
         }
-        if (xInput != 0 && !player.isBusy)
+        if (xInput != 0)
         {
             stateMachine.ChangeState(player.moveState);
         }
