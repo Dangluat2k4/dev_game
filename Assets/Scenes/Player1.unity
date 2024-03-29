@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 698316003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 1.23, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 1412672155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -424,7 +424,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 0.84375, y: 2.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -492,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 1752413021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08, y: -2.7, z: 0}
+  m_LocalPosition: {x: 2.01, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -519,9 +519,9 @@ MonoBehaviour:
   attackCkeck: {fileID: 1226399602}
   attackCkeckRadius: 0
   groundCheck: {fileID: 1954685426}
-  groundCheckDistance: 0.2
+  groundCheckDistance: 0.65
   wallCheck: {fileID: 698316004}
-  wallCheckDistance: 0.31
+  wallCheckDistance: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -529,11 +529,10 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
-  moveSpeed: 8
-  jumpForce: 13
-  dashCoolDown: 2
-  dashSpeed: 15
-  dashDuration: 0.2
+  moveSpeed: 12
+  jumpForce: 10
+  dashSpeed: 0.43
+  dashDuration: 0
   SwordReturnInpact: 0
 --- !u!70 &1752413024
 CapsuleCollider2D:
