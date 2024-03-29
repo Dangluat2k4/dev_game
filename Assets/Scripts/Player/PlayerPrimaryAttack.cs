@@ -39,7 +39,7 @@ public class PlayerPrimaryAttack : PlayerState
         lastTimeAttacked = Time.time;
         Debug.Log(lastTimeAttacked);
     }
-
+    //update 
     public override void Update()
     {
         base.Update();
