@@ -37,6 +37,11 @@ public class PlayerGroundState : PlayerState
             stateMachine.ChangeState(player.jumpState);
             Debug.Log("jump");
         }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            stateMachine.ChangeState(player.lightBallState);
+            Debug.Log("light Ball");
+        }
 
     }
 }
