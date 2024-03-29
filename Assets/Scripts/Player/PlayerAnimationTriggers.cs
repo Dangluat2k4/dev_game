@@ -10,5 +10,10 @@ public class PlayerAnimationTriggers : MonoBehaviour
     {
         player.AnimationTrigger();
     }
+    private void CreateFire()
+    {
+        Instantiate(player.bulletFire, player.firePos.position, transform.rotation);
+        player.AnimationTrigger();
+    }
 
 }
