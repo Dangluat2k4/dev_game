@@ -15,12 +15,13 @@ public class Player :Entity
 
 
     [Header("Dash info")]
-    [SerializeField] private float dashCoolDown;
-    private float dashUsageTimer;
     public float dashSpeed;
     public float dashDuration;
+<<<<<<< HEAD
     public float dashDir { get; private set; }
 
+=======
+>>>>>>> parent of 9efa5eb (fix Dash, Animation)
     public float SwordReturnInpact;
 
 
@@ -29,7 +30,10 @@ public class Player :Entity
     public PlayerAirState airState { get; private set; }
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
+<<<<<<< HEAD
     public PlayerDashState dashState { get; private set; }
+=======
+>>>>>>> parent of 9efa5eb (fix Dash, Animation)
     public PlayerPrimaryAttack primaryAttack { get; private set; }
 
     protected override void Awake()
@@ -59,7 +63,6 @@ public class Player :Entity
     {
         base.Update();
         stateMachine.currentState.Update();
-        CheckForDashInput();
     }
     public IEnumerator BusyFor(float _seconds)
     {
@@ -69,6 +72,7 @@ public class Player :Entity
     }
 
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTriger();
+<<<<<<< HEAD
 
     private void CheckForDashInput()
     {
@@ -88,4 +92,6 @@ public class Player :Entity
             stateMachine.ChangeState(dashState);
         }
     }
+=======
+>>>>>>> parent of 9efa5eb (fix Dash, Animation)
 }
