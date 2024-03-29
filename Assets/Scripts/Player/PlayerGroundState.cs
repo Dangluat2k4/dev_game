@@ -29,6 +29,8 @@ public class PlayerGroundState : PlayerState
             Debug.Log("taans cong");
 
         }
+        if (!player.IsGroundDetected())
+            stateMachine.ChangeState(player.airState);
 
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
         {
