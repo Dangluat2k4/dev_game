@@ -12,9 +12,6 @@ public class Player :Entity
     [Header("Move info")]
     public float moveSpeed = 12f;
     public float jumpForce;
-    [Header("Charge Fire")]
-    public GameObject bulletFire;
-    public Transform firePos;
 
 
     [Header("Dash info")]
@@ -34,7 +31,6 @@ public class Player :Entity
     public PlayerJumpState jumpState { get; private set; }
     public PlayerDashState dashState { get; private set; }
     public PlayerPrimaryAttack primaryAttack { get; private set; }
-    public PlayerLightBallState lightBallState { get; private set; }
 
     protected override void Awake()
     {
@@ -51,7 +47,6 @@ public class Player :Entity
         jumpState = new PlayerJumpState(this, stateMachine, "Jumping");
 
         primaryAttack = new PlayerPrimaryAttack(this, stateMachine, "Attack");
-        lightBallState = new PlayerLightBallState(this, stateMachine, "LightBall");
     }
 
     protected override void Start()
