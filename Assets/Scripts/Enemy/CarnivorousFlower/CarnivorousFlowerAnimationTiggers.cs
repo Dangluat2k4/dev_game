@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class CarnivorousFlowerAnimationTiggers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator animator; // Tham chiếu tới Animator component của hoa
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+       // Kiểm tra nếu player gần hoa thì tấn công
+        if (other.CompareTag("Player"))
+        {
+            // Kích hoạt animation tấn công của hoa
+            animator.SetTrigger("Attack");
+            Debug.Log("======== Tấn Công ======");
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit2D(Collider2D other)
     {
-        
+        // Kiểm tra nếu player ra khỏi vùng va chạm của hoa
+        if (other.CompareTag("Player"))
+        {
+            // Đặt lại hoa về trạng thái cảnh giới
+            animator.SetTrigger("Idle"); // về trạng thái cảnh giới
+            Debug.Log("======== Chờ tấn công ======");
+        }
     }
+  
 }
